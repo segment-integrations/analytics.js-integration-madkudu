@@ -29,7 +29,7 @@ describe('MadKudu', function() {
   });
 
   it('should have the right settings', function() {
-    analytics.compare(MadKudu, integration('MadKudu')
+    analytics.compare(MadKudu, integration('Madkudu')
       .global('madkudu')
       .option('apiKey', '')
       .readyOnLoad());
