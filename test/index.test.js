@@ -36,10 +36,6 @@ describe('MadKudu', function() {
   });
 
   describe('before loading', function() {
-    beforeEach(function() {
-      analytics.stub(madkudu, 'load');
-    });
-
     afterEach(function() {
       madkudu.reset();
     });
@@ -51,16 +47,10 @@ describe('MadKudu', function() {
         analytics.page();
         analytics.assert(window.madkudu);
       });
-
-      it('should call #load', function() {
-        analytics.initialize();
-        analytics.page();
-        analytics.called(madkudu.load);
-      });
     });
   });
 
-  describe('loading', function() {
+  describe('load', function() {
     it('should load', function(done) {
       analytics.load(madkudu, done);
     });
